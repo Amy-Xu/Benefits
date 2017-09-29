@@ -212,6 +212,7 @@ def impute(cps_alldata, ssa_data):
 	imputed_combined = cps_recipients.append(imputed)
 	total_before_adjustment = (imputed_combined.ss_val * imputed_combined.marsupwt).sum()
 	ratio = []
+    print AveBen2014_MonthlySSA * 12/total_before_adjustment
 	imputed_combined['ss_val'] = imputed_combined['ss_val'] * AveBen2014_MonthlySSA * 12/total_before_adjustment
 
 	#Getting final results and exporting to csv
